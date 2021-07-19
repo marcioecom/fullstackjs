@@ -1,5 +1,5 @@
 {
-  "name": "fullstackjs",
+  "name": "namegator-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "4.3.1",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
@@ -35,9 +36,18 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "quotes": ["error", "double"],
-      "indent": ["error", 2],
-      "semi": ["error", "always"]
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
     }
   },
   "browserslist": [
