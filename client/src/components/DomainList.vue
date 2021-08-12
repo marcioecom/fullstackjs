@@ -73,6 +73,27 @@ export default {
   methods: {
     addPrefix(prefix) {
       this.prefixes.push(prefix);
+      axios({
+        url: "http://localhost:4000",
+        method: "post",
+        data: {
+          query: `
+            mutation ($item: ItemInput) {
+              newPrefix: saveItem(item: $item) {
+                id
+                type
+                description
+              }
+            }
+          `,
+          variables: {
+            item: {
+              type: "prefix",
+              description: prefix,
+            },
+          },
+        },
+      });
     },
     deletePrefix(prefix) {
       this.prefixes.splice(this.prefixes.indexOf(prefix), 1);
